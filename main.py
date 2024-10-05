@@ -13,8 +13,8 @@ pantalla = pygame.display.set_mode(DIMENSIONES)
 # título de pantalla
 pygame.display.set_caption("Exoplanets for Beginners!")
 
-bg = pygame.image.load("images\intro.jpeg")
-bg = pygame.transform.scale(bg, DIMENSIONES)
+intro_imagen = pygame.image.load("images\intro.jpeg")
+intro_imagen = pygame.transform.scale(intro_imagen, DIMENSIONES)
 
 while True:
     pantalla.blit(bg, (0,0))
