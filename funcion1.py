@@ -1,11 +1,14 @@
-import tkinter as tk
-from tkinter import PhotoImage
+import pygame
 
-def crear_boton(ventana):
-    button_image = PhotoImage(file="ruta/a/tu_imagen.png")
-    start_button = tk.Button(ventana, image=button_image, command=start_game)
-    start_button.image = button_image  # Mantener referencia a la imagen
-    start_button.pack(pady=20)
-    
-    def start_game():
-        print("juega bru")
+class Boton:
+    def __init__(self, x, y, imagen, accion):
+        self.imagen = imagen
+        self.rect = self.imagen.get_rect(topleft=(x, y))
+        self.accion = accion
+
+    def dibujar(self, pantalla):
+        pantalla.blit(self.imagen, self.rect)
+
+    def verificar_click(self, pos):
+        if self.rect.collidepoint(pos):
+            self.accion()
