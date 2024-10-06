@@ -14,6 +14,10 @@ pantalla = pygame.display.set_mode(DIMENSIONES)
 # Título de pantalla
 pygame.display.set_caption("Exoplanets for Beginners!")
 
+# ícono del juego
+game_icon = pygame.image.load('images\icon.png')
+pygame.display.set_icon(game_icon)
+
 # Cargar las imágenes de fondo
 fondos = cargar_fondos()
 
@@ -55,7 +59,7 @@ boton_start = Boton(70, 310, imagen_boton_inicial, lambda: cambiar_fondo_local(1
 # Función para cambiar el fondo de manera local y ocultar el botón
 def cambiar_fondo_local(siguiente_fondo):
     global indice_fondo_actual, mostrar_boton
-    print(f"Cambiando fondo a: {siguiente_fondo}")  # Debug
+    # print(f"Cambiando fondo a: {siguiente_fondo}")  # Debug
     indice_fondo_actual = siguiente_fondo  # Cambia al siguiente fondo
     mostrar_boton = False  # Ocultar el botón inicial al cambiar de panel
 
@@ -113,7 +117,7 @@ while True:
         # Verificar clic en el ratón
         if evento.type == pygame.MOUSEBUTTONDOWN:
             if evento.button == 1:
-                print("Clic detectado en:", evento.pos)  # Log de clics
+                # print("Clic detectado en:", evento.pos)  # Log de clics
                 if mostrar_boton:
                     boton_start.verificar_click(evento.pos)
                 else:
@@ -156,11 +160,11 @@ while True:
                         
                     elif indice_fondo_actual in (29,30,31):
                         boton_back28.verificar_click(evento.pos)  
-                           
+
                     elif indice_fondo_actual == 32:
                         boton_1and2.verificar_click(evento.pos)
                         boton_2and3.verificar_click(evento.pos)    
-                               
+
                     elif indice_fondo_actual in (33,34):
                         if not boton_tryagain34.rect.collidepoint(evento.pos):
                             cambiar_fondo_local(35)
