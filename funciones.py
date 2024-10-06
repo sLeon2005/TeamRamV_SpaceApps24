@@ -36,7 +36,13 @@ def cambiar_fondo(indice_fondo_actual, total_fondos, mostrar_boton_11=False):
     # Devolver si se muestra el botón y el índice del fondo actual
     return indice_fondo_actual, mostrar_boton_11
 
-# Función específica para el botón en el panel 11
-def cambiar_a_panel_12():
-    """Cambia directamente al panel 12 desde el panel 11."""
-    return 12
+def cambiar_a_panel_anterior(indice_actual):
+    """
+    Cambia al panel anterior según el índice actual.
+    :param indice_actual: Índice del panel actual.
+    :return: Nuevo índice del panel.
+    """
+    if indice_actual > 0:
+        return indice_actual - 1  # Retrocede al panel anterior
+    else:
+        return 0  # Si está en el primer panel, se queda en 0
