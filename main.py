@@ -50,7 +50,7 @@ imagen_boton_done234 = pygame.image.load("images/done.png").convert_alpha()
 imagen_boton_done28 = pygame.image.load("images/done28.png").convert_alpha()
 
 imagen_boton_1and2 = pygame.image.load("images/1and2.png")
-imagen_boton_2and3 = pygame.image.load("images/2and3.png")
+imagen_boton_1and3 = pygame.image.load("images/1and3.png")
 
 
 # Crear el botón inicial y asignar la función cambiar_fondo
