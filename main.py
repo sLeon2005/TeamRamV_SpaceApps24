@@ -93,10 +93,10 @@ boton_done28 = Boton(20, 500,imagen_boton_done28, lambda: cambiar_fondo_local(32
 boton_done36 = Boton(20, 500,imagen_boton_done28, lambda: cambiar_fondo_local(40))
 
 boton_1and2 = Boton(75, 25, imagen_boton_1and2, lambda: cambiar_fondo_local(33))
-boton_2and3 = Boton(75, 105, imagen_boton_2and3, lambda: cambiar_fondo_local(34))
+boton_1and3 = Boton(75, 105, imagen_boton_1and3, lambda: cambiar_fondo_local(34))
 
 boton_1and2_40 = Boton(75, 25, imagen_boton_1and2, lambda: cambiar_fondo_local(41))
-boton_2and3_40 = Boton(75, 105, imagen_boton_2and3, lambda: cambiar_fondo_local(42))
+boton_1and3_40 = Boton(75, 105, imagen_boton_1and3, lambda: cambiar_fondo_local(42))
 
 # Crear los botones para el panel 21
 boton_resultado_1 = Boton(175, 115, imagen_boton_1, lambda: cambiar_fondo_local(24))  # Botón que lleva al fondo 24
@@ -163,7 +163,7 @@ while True:
 
                     elif indice_fondo_actual == 32:
                         boton_1and2.verificar_click(evento.pos)
-                        boton_2and3.verificar_click(evento.pos)    
+                        boton_1and3.verificar_click(evento.pos)    
 
                     elif indice_fondo_actual in (33,34):
                         if not boton_tryagain34.rect.collidepoint(evento.pos):
@@ -182,7 +182,7 @@ while True:
                         
                     elif indice_fondo_actual == 40:
                         boton_1and2_40.verificar_click(evento.pos)
-                        boton_2and3_40.verificar_click(evento.pos)
+                        boton_1and3_40.verificar_click(evento.pos)
 
                     elif indice_fondo_actual in (41,42):
                         if not boton_tryagain40.rect.collidepoint(evento.pos):
@@ -240,7 +240,7 @@ while True:
 
     if indice_fondo_actual == 32:
         boton_1and2.dibujar(pantalla)
-        boton_2and3.dibujar(pantalla)
+        boton_1and3.dibujar(pantalla)
         
     if indice_fondo_actual in (33,34):
         boton_tryagain34.dibujar(pantalla)
@@ -256,7 +256,7 @@ while True:
         
     if indice_fondo_actual == 40:
         boton_1and2_40.dibujar(pantalla)
-        boton_2and3_40.dibujar(pantalla)
+        boton_1and3_40.dibujar(pantalla)
 
     elif indice_fondo_actual in (41,42):
         boton_tryagain40.dibujar(pantalla)
