@@ -9,7 +9,7 @@ def cargar_fondos():
     # Cargar las imágenes de fondo
     try:
         fondos = []
-        for i in range(22):  # Cambia el rango según el número total de paneles
+        for i in range(26):  # Cambia el rango según el número total de paneles
             fondo = pygame.image.load(f"images/panel{i}.jpeg")
             fondo = pygame.transform.scale(fondo, DIMENSIONES)
             fondos.append(fondo)
